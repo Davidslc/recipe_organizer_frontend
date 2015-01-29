@@ -1,4 +1,9 @@
-<h1>{{ recipe.name }}</h1>
+<div class="recipe-card recipe-detail-card col-md-4">
+    <p>{{ recipe.name }}</p>
+    <p>{{ recipe.description }}</p>
+    <p>{{ recipe.directions }}</p>
 
-<p>{{ recipe.description }}</p>
-<p>{{ recipe.directions }}</p>
+    <img class="img-responsive" src="{{ recipe.photo }}">
+
+    <button class="btn btn-danger" ng-click="deleteRecipe()">Delete Recipe</button>
+</div>

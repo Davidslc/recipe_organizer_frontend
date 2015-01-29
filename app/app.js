@@ -4,6 +4,7 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.recipes',
+    'myApp.ingredients',
     'myApp.recipeDetail',
     'myApp.addRecipe',
     'myApp.version',

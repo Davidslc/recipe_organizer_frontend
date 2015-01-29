@@ -28,3 +28,18 @@
   content: "";
   padding: 0;
 }
+
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: inherit;
+    padding-top: 1px;
+    margin-top: 30px;
+}
+
+.recipe-detail-card {
+    padding: 50px;
+}
+body {
+    background-color: #CBD5BA;
+}
