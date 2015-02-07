@@ -1,5 +1,14 @@
 /* app css stylesheet */
 
+a {
+    color: #777;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -32,11 +41,20 @@
 .recipe-card {
     /*border-radius: 5px;*/
     padding: inherit;
-    padding-top: 1px;
-    margin-top: 30px;
+    /*padding-top: 1px;*/
+    /*margin-top: 30px;*/
     background: #fff;
     background: rgba(255,255,255,0.9);
+}
 
+.recipe-card h2, .recipe-card p {
+    padding-left: 3%;
+}
+
+.thumbnail {
+    padding: 0;
+    border-radius: 0;
+    border: none;
 }
 
 .recipe-detail-card {
