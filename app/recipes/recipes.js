@@ -20,5 +20,7 @@ angular.module('myApp.recipes', ['ngRoute'])
         })
     }
 
-    $scope.baseUrl = BASE_URL
+    $scope.getImageUrl = function (src) {
+        return BASE_URL + src;
+    }
 }]);

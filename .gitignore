@@ -6,3 +6,4 @@ tmp
 .DS_Store
 .idea
 *.orig
+base-api-url.js
