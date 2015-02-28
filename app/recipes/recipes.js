@@ -10,7 +10,7 @@ angular.module('myApp.recipes', ['ngRoute'])
 }])
 
 .controller('RecipesCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-    Restangular.all('recipes').getList().then(function(recipes) {
+    Restangular.all('recipes').customGETLIST().then(function(recipes) {
         $scope.recipes = recipes;
     });
 
