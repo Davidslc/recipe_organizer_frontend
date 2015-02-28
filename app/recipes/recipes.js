@@ -19,4 +19,6 @@ angular.module('myApp.recipes', ['ngRoute'])
             $location.path('/recipes');
         })
     }
+
+    $scope.baseUrl = BASE_URL
 }]);
