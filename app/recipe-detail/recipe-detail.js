@@ -30,4 +30,8 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
             })
         }
     }
+
+    $scope.getImageUrl = function (src) {
+        return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
+    }
 }]);
