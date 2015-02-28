@@ -21,6 +21,6 @@ angular.module('myApp.recipes', ['ngRoute'])
     }
 
     $scope.getImageUrl = function (src) {
-        return BASE_URL + src;
+        return src.replace(/http:\/\/.*\/media/, BASE_URL);
     }
 }]);
