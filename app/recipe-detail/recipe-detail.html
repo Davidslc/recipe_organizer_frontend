@@ -3,7 +3,7 @@
     <p>{{ recipe.description }}</p>
     <p>{{ recipe.directions }}</p>
 
-    <img class="img-responsive" src="{{ recipe.photo }}">
+    <img class="img-responsive" src="{{ getImageUrl(recipe.photo)}}">
 
     <button class="btn btn-danger" ng-click="deleteRecipe()">Delete Recipe</button>
     <br>
