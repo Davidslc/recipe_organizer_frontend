@@ -10,5 +10,12 @@ angular.module('myApp.home', ['ngRoute'])
 }])
 
 .controller('HomeCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-  console.log("LOADED HOME")
+    Restangular.all('recipes').customGETLIST().then(function(recipes) {
+        $scope.recipes = recipes;
+    });
+
+      $scope.getImageUrl = function (src) {
+        return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
+    }
+
 }]);

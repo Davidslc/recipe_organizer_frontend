@@ -69,3 +69,25 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.image-wrap {
+    max-height: 530px;
+    overflow: hidden;
+    max-width: 1109px;
+    width: 100%;
+    -webkit-transition: max-width .5s ease-out;  /* Saf3.2+, Chrome */
+    -moz-transition: max-width .5s ease-out;  /* FF4+ */
+    -ms-transition: max-width .5s ease-out;  /* IE10? */
+    -o-transition: max-width .5s ease-out;  /* Opera 10.5+ */
+    transition: max-width .5s ease-out;
+}
+
+.image-wrap img {
+    width: 100%;
+    height:auto;
+    -webkit-transition: margin-top .5s ease-out;  /* Saf3.2+, Chrome */
+    -moz-transition: margin-top .5s ease-out;  /* FF4+ */
+    -ms-transition: margin-top .5s ease-out;  /* IE10? */
+    -o-transition: margin-top .5s ease-out;  /* Opera 10.5+ */
+    transition: margin-top .5s ease-out;
+}
