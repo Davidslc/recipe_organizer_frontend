@@ -33,10 +33,6 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
             }
         };
 
-        //$scope.getImageUrl = function (src) {
-        //    return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
-        //};
-
         $scope.addPhoto = function () {
             var file = document.getElementById('file').files[0],
                 reader = new FileReader();
@@ -59,13 +55,14 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
                 });
 
             };
+            // $http.get($scope.getImageUrl($scope.recipe.photo) + '/', {responseType: 'arraybuffer'}).then(function(e){   // This is for production
             $http.get($scope.recipe.photo + '/', {responseType: 'arraybuffer'}).then(function(e){
                 var file = new Blob([e.data]);
                 reader.readAsBinaryString(file);
             });
         };
 
-        //$scope.getImageUrl = function (src) {
-        //    return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
-        //}
+        $scope.getImageUrl = function (src) {
+            return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
+        }
     }]);
