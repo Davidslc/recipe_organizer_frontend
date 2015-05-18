@@ -18,9 +18,9 @@ angular.module('myApp.recipes', ['ngRoute'])
         Restangular.one('recipes', recipeID).customDELETE().then(function(){
             $location.path('/recipes');
         })
-    }
+    };
 
-    $scope.getImageUrl = function (src) {
-        return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
-    }
+    //$scope.getImageUrl = function (src) {
+    //    return src.replace(/http:\/\/.*\/media/, BASE_URL + "/media");
+    //}
 }]);

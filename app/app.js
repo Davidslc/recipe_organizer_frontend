@@ -9,11 +9,12 @@ angular.module('myApp', [
     'myApp.addRecipe',
     'myApp.home',
     'myApp.version',
-    'restangular',
+    'restangular'
 ]).
     config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
         $routeProvider.otherwise({redirectTo: '/recipes'});
 
-        RestangularProvider.setBaseUrl(BASE_URL)
+        RestangularProvider.setBaseUrl(BASE_URL);
+        RestangularProvider.setRequestSuffix('/');
 
     }]);

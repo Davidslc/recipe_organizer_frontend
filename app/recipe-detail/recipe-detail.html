@@ -1,11 +1,42 @@
 <div class="recipe-card recipe-detail-card col-md-4">
-    <p>{{ recipe.name }}</p>
-    <p>{{ recipe.description }}</p>
-    <p>{{ recipe.directions }}</p>
+    <p ng-hide="editing">{{ recipe.name }}</p>
 
-    <img class="img-responsive" src="{{ getImageUrl(recipe.photo)}}">
+    <div class="form-group" ng-show="editing">
+        <label>Name</label>
+        <input class="form-control" ng-model="recipe.name">
+    </div>
 
-    <button class="btn btn-danger" ng-click="deleteRecipe()">Delete Recipe</button>
+    <div id="select-image">
+        <label>Select Image
+            <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
+                    onchange="angular.element(this).scope().addPhoto()"/>
+        </label>
+    </div>
+
+    <!--<img class="img-responsive" ng-src="{{ getImageUrl(recipe.photo)}}">-->
+
+    <img ng-src="{{ recipe.photo }}" width="300" class="img-responsive">
+
+    <p ng-hide="editing">{{ recipe.description }}</p>
+
+    <div class="form-group" ng-show="editing" >
+        <label>Description</label>
+        <textarea class="form-control" ng-model="recipe.description"></textarea>
+    </div>
+
+    <p ng-hide="editing">{{ recipe.directions }}</p>
+
+    <div class="form-group" ng-show="editing">
+        <label>Directions</label>
+        <textarea class="form-control" ng-model="recipe.directions"></textarea>
+    </div>
+
+
+
+    <button class="btn btn-danger" ng-click="deleteRecipe()">Delete</button>
+    <button class="btn btn-default" ng-hide="editing" ng-click="editing = !editing">Edit</button>
+    <button class="btn btn-success" ng-show="editing" ng-click="updateRecipe()">Save</button>
     <br>
+
     {{ recipe.comments }}
 </div>
